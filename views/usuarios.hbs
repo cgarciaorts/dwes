@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+<body>
+    {{> navbar}}
+
+    <div class="contenido">
+        {{#each obtenerusuarios}}
+        <div class="usuarios">
+            <div class="inside">
+                <h1>{{nombre}}</h1>
+                <h2>{{apellido}}</h2>
+                <h3>{{email}}</h3> 
+            </div>
+            <div class="btn1">
+                <form action="/eliminarusuario/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="el">Eliminar</button>
+                </form>
+                <button class="edit"><a class="update" href="/editarusuario/{{_id}}">Actualizar</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+<style scoped>
+body{
+    background-color: #a5a5a5a1;
+}
+.contenido{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap
+}
+.usuarios{
+    width: 25%;
+    margin: 10px;
+    border: 1px solid;
+    background-color: #0303030c;
+    transition: 0.3s;
+    border-radius: 5%;
+
+}
+.inside{
+    text-align: center;
+}
+.btn1{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+</style>
+</body>
+</html>

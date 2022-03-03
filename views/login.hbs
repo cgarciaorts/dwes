@@ -1,0 +1,53 @@
+{{> navbar}}
+<div>
+    <form action="login" method="POST">
+        <label>Nombre</label>
+        <input type="text" name="nombre" placeholder="nombre">
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="password">
+
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+<style>
+*{
+    box-sizing:border-box;
+    }
+
+body{
+    background-color: #999999;
+}
+
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+    background-color: #333;
+	margin:auto;
+	margin-top: 10%;
+    color: aliceblue;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+input{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+button{
+    justify-content: center;
+    margin-left: 45%;
+    margin-top: 10%;
+}
+
+</style>

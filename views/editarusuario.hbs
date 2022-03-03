@@ -1,0 +1,59 @@
+{{> navbar}}
+
+<form action="/usuarioEditado/{{usuarioeditado._id}}?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <h1>Editar usuario</h1>
+    <label>Nombre </label>
+    <input type="text" name="nombre" placeholder="nombre" value="{{usuarioeditado.nombre}}">
+    <label>Apellido</label>
+    <input type="text" name="apellido" placeholder="apellido" value="{{usuarioeditado.apellido}}">
+    <label>Email</label>
+    <input type="text" name="email" placeholder="email" value="{{usuarioeditado.email}}">
+    <label>Contraseña</label>
+    <input type="text" name="password" placeholder="password" value="{{usuarioeditado.password}}">
+    <div class="btn">
+        <button type="submit">Actualizar</button>
+    </div>
+</form>
+
+
+<style>  
+*{
+    box-sizing:border-box;
+    }
+
+body{
+    background-color: rgb(153, 153, 153);
+}
+
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+    background-color: #333;
+	margin:auto;
+	margin-top: 10%;
+    color: aliceblue;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+input{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+button{
+    justify-content: center;
+    margin-left: 45%;
+    margin-top: 10%;
+}
+</style>
